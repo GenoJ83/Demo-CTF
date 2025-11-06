@@ -113,11 +113,4 @@ python a10_ssrf.py
 Notes about running and safety
 - These steps are intended for controlled, local testing only.
 - Use virtual environments, firewalled hosts, or containers to keep tests isolated.
-- If you want, I can also add a `patched/` directory with fixed versions and short tests showing the patched behavior.
 
-Next steps I can take for you
-- Create patched versions for selected files and explain the fixes (recommended start: a03_injection.php, a01_idor.php, a10_ssrf.py).
-- Add Docker Compose to run the demos in isolated containers.
-- Add automated tests that demonstrate exploitation of the vulnerable versions and confirm the patched versions are safe.
-
-If you want patched versions or a Docker setup, tell me which files to prioritize.
