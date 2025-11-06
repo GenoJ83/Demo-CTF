@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head><title>A06 Test</title></head>
+<body>
+<h1>Old Library</h1>
+<p>Using jQuery 1.9.1 (known XSS)</p>
+<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+<input id="input" placeholder="Type: <script>alert('XSS')</script>">
+<button onclick="test()">Test</button>
+<script>
+function test() {
+  $('#input').html($('#input').val());  // XSS vuln
+}
+</script>
+<p id="flag" style="display:none;">UCU{0ld_l0g4j}</p>
+<p>How to Exploit: Enter &lt;script&gt;document.getElementById('flag').style.display='block'&lt;/script&gt; → XSS reveals flag.</p>
+<p>Flag: UCU{0ld_l0g4j}</p>
+</body>
+</html>
