@@ -13,7 +13,7 @@ Files and exploitation instructions
 - Run: Start PHP built-in server in the folder:
 
 ```powershell
-cd "c:\Users\HP\Desktop\MOCK"
+cd "c:\Users\HP\Desktop\Demo CTF"
 php -S localhost:8000
 ```
 
@@ -40,7 +40,7 @@ php -S localhost:8000
 - Run:
 
 ```powershell
-cd "c:\Users\HP\Desktop\MOCK"
+cd "c:\Users\HP\Desktop\Demo CTF"
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 pip install flask
@@ -76,7 +76,7 @@ python a04_insecure_design.py
 - Run:
 
 ```powershell
-cd "c:\Users\HP\Desktop\MOCK"
+cd "c:\Users\HP\Desktop\Demo CTF"
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 pip install flask
@@ -98,7 +98,7 @@ python a08_integrity_failures.py
 - Run:
 
 ```powershell
-cd "c:\Users\HP\Desktop\MOCK"
+cd "c:\Users\HP\Desktop\Demo CTF"
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 pip install flask requests
