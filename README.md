@@ -1,6 +1,6 @@
 Vulnerable Demo Suite (local only)
 
-This folder contains intentionally vulnerable demo apps corresponding to the OWASP-like list you provided. The following section documents how to run each demo locally and how to trigger the vulnerability (for learning/testing only).
+This folder contains intentionally vulnerable demo apps corresponding to the OWASP-like vulnerabilities. The following section documents how to run each demo locally and how to trigger the vulnerability (for learning/testing only).
 
 Safety first
 - Run these demos only on an isolated machine, disposable VM, or container.
