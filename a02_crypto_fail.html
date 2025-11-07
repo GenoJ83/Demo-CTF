@@ -1,24 +1,81 @@
 <!DOCTYPE html>
-<html>
-<head><title>A02 Test</title></head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Fail Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        input[type="password"] {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 200px;
+        }
+        button {
+            padding: 8px 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #result {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #e9ecef;
+            border-radius: 4px;
+        }
+        .flag {
+            background-color: #d4edda;
+            color: #155724;
+            padding: 10px;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
 <body>
-<h1>Secure Login?</h1>
-<form id="login">
-  Password: <input type="password" id="pass">
-  <button type="button" onclick="check()">Login</button>
-</form>
-<p id="result"></p>
-<script>
-function check() {
-  const pass = document.getElementById('pass').value;
-  const hash = btoa(pass);  // Base64 (weak "crypto")
-  document.getElementById('result').innerHTML = `Hash: ${hash}`;
-  if (hash === 'c2VjcmV0MTIz') {  // "secret123" base64
-    document.getElementById('result').innerHTML += '<br>Flag: UCU{crYpt0_w34k}';
-  }
-}
-</script>
-<p>How to Exploit: Enter "secret123" (or decode base64 in DevTools).</p>
-<p>Flag: UCU{crYpt0_w34k}</p>
+    <div class="container">
+        <h1>Secure Login?</h1>
+        <form id="login">
+            Password: <input type="password" id="pass">
+            <button type="button" onclick="check()">Login</button>
+        </form>
+        <p id="result"></p>
+        <script>
+        function check() {
+            const pass = document.getElementById('pass').value;
+            const hash = btoa(pass);  // Base64 (weak "crypto")
+            document.getElementById('result').innerHTML = `Hash: ${hash}`;
+            if (hash === 'c2VjcmV0MTIz') {  // "secret123" base64
+                document.getElementById('result').innerHTML += '<br><span class="flag">Flag: UCU{crYpt0_w34k}</span>';
+            }
+        }
+        </script>
+        <p>How to Exploit: Enter "secret123" (or decode base64 in DevTools).</p>
+    </div>
 </body>
 </html>

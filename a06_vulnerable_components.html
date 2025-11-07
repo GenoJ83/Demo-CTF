@@ -1,19 +1,68 @@
 <!DOCTYPE html>
-<html>
-<head><title>A06 Test</title></head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vulnerable Components Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        input[type="text"] {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 300px;
+        }
+        button {
+            padding: 8px 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #flag {
+            display: none;
+            background-color: #d4edda;
+            color: #155724;
+            padding: 10px;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
 <body>
-<h1>Old Library</h1>
-<p>Using jQuery 1.9.1 (known XSS)</p>
-<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
-<input id="input" placeholder="Type: <script>alert('XSS')</script>">
-<button onclick="test()">Test</button>
-<script>
-function test() {
-  $('#input').html($('#input').val());  // XSS vuln
-}
-</script>
-<p id="flag" style="display:none;">UCU{xss_0ld_jq}</p>
-<p>How to Exploit: Enter &lt;script&gt;document.getElementById('flag').style.display='block'&lt;/script&gt; → XSS reveals flag.</p>
-<p>Flag: UCU{xss_0ld_jq}</p>
+    <div class="container">
+        <h1>Old Library</h1>
+        <p>Using jQuery 1.9.1 (known XSS)</p>
+        <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <input id="input" placeholder="Type: <script>alert('XSS')</script>">
+        <button onclick="test()">Test</button>
+        <script>
+        function test() {
+          $('#input').html($('#input').val());  // XSS vuln
+        }
+        </script>
+        <div id="flag">UCU{xss_0ld_jq}</div>
+        <p>How to Exploit: Enter <script>document.getElementById('flag').style.display='block'</script> → XSS reveals flag.</p>
+    </div>
 </body>
 </html>
