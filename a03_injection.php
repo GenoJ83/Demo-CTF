@@ -1,5 +1,5 @@
 <?php
-$flag = "UCU{sql1_inj3ct3d}";
+$flag = "UCU{inj3ct10n_r1sk}";
 $db = new SQLite3(':memory:');
 $db->exec("CREATE TABLE users (id INT, name TEXT); INSERT INTO users VALUES (1, 'user'), (2, 'admin');");
 
@@ -23,4 +23,4 @@ if (strpos((string)$id, "' OR '1'='1") !== false) {
 ?>
 </pre>
 <p>How to Exploit: Enter 1' OR '1'='1 in ID field (SQLi).</p>
-<p>Flag: UCU{sql1_inj3ct3d}</p>
+<p>Flag: UCU{inj3ct10n_r1sk}</p>

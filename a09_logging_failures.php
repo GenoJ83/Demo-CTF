@@ -1,5 +1,5 @@
 <?php
-$flag = "UCU{n0_l0gs_n0_pr0bl3m}";
+$flag = "UCU{l0gg1ng_m1ss}";
 $attempt = $_POST['attempt'] ?? '';
 if ($attempt == 'admin') {
     echo "<h1>Success</h1><p>Flag: $flag</p>";
@@ -13,4 +13,4 @@ if ($attempt == 'admin') {
   <button>Try</button>
 </form>
 <p>How to Exploit: Brute-force "admin" (no rate limit/logs).</p>
-<p>Flag: UCU{n0_l0gs_n0_pr0bl3m}</p>
+<p>Flag: UCU{l0gg1ng_m1ss}</p>

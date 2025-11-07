@@ -1,5 +1,5 @@
 <?php
-$flag = "UCU{m1sc0nf1gur3d}";
+$flag = "UCU{p4th_tr4v3rs4l}";
 if (isset($_GET['page']) && $_GET['page'] == '../flag.txt') {
     echo "<h1>Flag: $flag</h1>";
 } else {
@@ -7,4 +7,4 @@ if (isset($_GET['page']) && $_GET['page'] == '../flag.txt') {
 }
 ?>
 <p>How to Exploit: Path traversal: ?page=../flag.txt (create flag.txt with flag).</p>
-<p>Flag: UCU{m1sc0nf1gur3d}</p>
+<p>Flag: UCU{p4th_tr4v3rs4l}</p>

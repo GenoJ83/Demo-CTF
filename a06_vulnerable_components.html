@@ -12,8 +12,8 @@ function test() {
   $('#input').html($('#input').val());  // XSS vuln
 }
 </script>
-<p id="flag" style="display:none;">UCU{0ld_l0g4j}</p>
+<p id="flag" style="display:none;">UCU{xss_0ld_jq}</p>
 <p>How to Exploit: Enter &lt;script&gt;document.getElementById('flag').style.display='block'&lt;/script&gt; → XSS reveals flag.</p>
-<p>Flag: UCU{0ld_l0g4j}</p>
+<p>Flag: UCU{xss_0ld_jq}</p>
 </body>
 </html>
