@@ -70,12 +70,12 @@
             const pass = document.getElementById('pass').value;
             const hash = btoa(pass);  // Base64 (weak "crypto")
             document.getElementById('result').innerHTML = `Hash: ${hash}`;
-            if (hash === 'c2VjcmV0MTIz') {  // "secret123" base64
+            if (hash === 'c2VjcmV0MTIz') {  
                 document.getElementById('result').innerHTML += '<br><span class="flag">Flag: UCU{crYpt0_w34k}</span>';
             }
         }
         </script>
-        <p>How to Exploit: Enter "secret123" (or decode base64 in DevTools).</p>
+        <p>How to Exploit: Open DevTools (F12) and inspect the JavaScript code to find the expected hash (e.g., 'c2VjcmV0MTIz'). In the DevTools Console, decode the hash using <code>atob('c2VjcmV0MTIz')</code> to get the password. Enter the decoded password into the Password field and click Login to reveal the flag.</p>
     </div>
 </body>
 </html>

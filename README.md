@@ -25,9 +25,9 @@ php -S localhost:8000
 2) a02_crypto_fail.html — Weak client-side 'crypto' (HTML/JS)
 - Run: Open `a02_crypto_fail.html` in your browser (file:// or via the local server).
 - Exploit steps:
-	1. Enter password `secret123` into the Password field.
-	2. Click Login — the page displays the Base64 hash `c2VjcmV0MTIz` and reveals the flag: UCU{crYpt0_w34k}.
-	3. Alternatively, open DevTools Console and run `btoa('secret123')` to confirm the hash.
+	1. Open DevTools (F12) and inspect the JavaScript code to find the expected hash (e.g., 'c2VjcmV0MTIz').
+	2. In the DevTools Console, decode the hash using `atob('c2VjcmV0MTIz')` to get the password.
+	3. Enter the decoded password into the Password field and click Login to reveal the flag: UCU{crYpt0_w34k}.
 
 3) a03_injection.php — SQL injection demo (PHP + SQLite)
 - Run: Use the PHP built-in server as above.

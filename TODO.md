@@ -1,10 +1,11 @@
-- [x] Update a01_idor.php: Remove flag from bottom, add CSS styling
-- [x] Update a02_crypto_fail.html: Add CSS styling
-- [x] Update a03_injection.php: Add CSS styling
-- [x] Update a04_insecure_design.py: Add CSS styling to HTML output
-- [x] Update a05_misconfig.php: Add CSS styling
-- [x] Update a06_vulnerable_components.html: Add CSS styling
-- [x] Update a07_auth_failures.php: Add CSS styling
-- [x] Update a08_integrity_failures.py: Add CSS styling to HTML output
-- [x] Update a09_logging_failures.php: Add CSS styling
-- [x] Update a10_ssrf.py: Add CSS styling to HTML output
+- [x] Update a01_idor.php: Replace flag with UCU{1d0r_vuln3r4bl3}
+- [x] Update a02_crypto_fail.html: Replace flag with UCU{crYpt0_w34k}
+- [x] Update a03_injection.php: Replace flag with UCU{inj3ct10n_r1sk}
+- [x] Update a04_insecure_design.py: Replace flag with UCU{d3s1gn_fl4w}
+- [x] Update a05_misconfig.php: Replace flag with UCU{p4th_tr4v3rs4l}
+- [x] Update a06_vulnerable_components.html: Replace flag with UCU{xss_0ld_jq}
+- [x] Update a07_auth_failures.php: Replace flag with UCU{4uth_f41l}
+- [x] Update a08_integrity_failures.py: Replace flag with UCU{1nt3gr1ty_br34k}
+- [x] Update a09_logging_failures.php: Replace flag with UCU{l0gg1ng_m1ss}
+- [x] Update a10_ssrf.py: Replace flag with UCU{ssrf_4tt4ck}
+- [x] Update README.md: Update all flag references in exploit instructions
