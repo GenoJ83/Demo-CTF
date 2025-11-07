@@ -29,12 +29,12 @@ php -S localhost:8000
 	2. In the DevTools Console, decode the hash using `atob('c2VjcmV0MTIz')` to get the password.
 	3. Enter the decoded password into the Password field and click Login to reveal the flag: UCU{crYpt0_w34k}.
 
-3) a03_injection.php — SQL injection demo (PHP + SQLite)
+3) a03_injection.php — SQL injection demo (PHP)
 - Run: Use the PHP built-in server as above.
 - Exploit steps:
 	1. Open http://localhost:8000/a03_injection.php
-	2. In the ID field enter the payload: 1' OR '1'='1 and submit.
-	3. The demo checks for that pattern and will print the admin flag: UCU{inj3ct10n_r1sk} (note: this demo uses an in-memory SQLite DB and a simple detection string to illustrate SQLi).
+	2. In the ID field enter the payload: <code>1' OR '1'='1</code> and submit.
+	3. This bypasses the intended query logic by making the WHERE clause always true, revealing the admin flag: UCU{inj3ct10n_r1sk} (note: this demo simulates a database with an array and detects the injection pattern to illustrate SQLi).
 
 4) a04_insecure_design.py — Insecure design (Flask)
 - Run:

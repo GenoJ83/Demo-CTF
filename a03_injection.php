@@ -61,20 +61,21 @@
     <div class="container">
         <?php
         $flag = "UCU{inj3ct10n_r1sk}";
-        $db = new SQLite3(':memory:');
-        $db->exec("CREATE TABLE users (id INT, name TEXT); INSERT INTO users VALUES (1, 'user'), (2, 'admin');");
+        // Simulate database with array (SQLite3 not available)
+        $users = [
+            1 => 'user',
+            2 => 'admin'
+        ];
 
         $id = $_GET['id'] ?? 1;
-        // Use a prepared statement (keeps example but still demonstrates intended behavior)
-        $stmt = $db->prepare("SELECT * FROM users WHERE id = :id");
-        $stmt->bindValue(':id', $id, SQLITE3_INTEGER);
-        $result = $stmt->execute();
+        // Simulate query result
+        $result = isset($users[$id]) ? [['id' => $id, 'name' => $users[$id]]] : [];
         ?>
         <h1>User Search</h1>
         <form>ID: <input name="id" value="<?= htmlspecialchars($id) ?>"><button>Search</button></form>
         <pre>
         <?php
-        while ($row = $result->fetchArray()) {
+        foreach ($result as $row) {
             echo "ID: {$row['id']} | Name: {$row['name']}\n";
         }
         // The next check emulates an injection detection for the demo page
@@ -83,7 +84,7 @@
         }
         ?>
         </pre>
-        <p>How to Exploit: Enter 1' OR '1'='1 in ID field (SQLi).</p>
+        <p>How to Exploit: Enter <code>1' OR '1'='1</code> in the ID field and submit. This bypasses the intended query logic by making the WHERE clause always true, revealing the admin flag. In a real scenario, this would allow access to unauthorized data.</p>
     </div>
 </body>
 </html>
